@@ -1,0 +1,80 @@
+# Problem Tracker
+
+Use this file to track **mastery**, not activity.
+
+## Topic Template
+
+### Topic: 
+
+- Concept understood: [ ]
+- Implemented from scratch: [ ]
+- Complexity known: [ ]
+- Edge cases tested: [ ]
+- Easy problems: 0 / 5
+- Medium problems: 0 / 5
+- Hard problems: 0 / 2
+- Re-solved without notes: [ ]
+- Can explain from memory: [ ]
+
+### Notes
+- 
+
+### Common mistakes
+- 
+
+---
+
+## Current Queue
+
+### Phase 0 — C++ Basics
+- [ ] Hello World
+- [ ] Input / Output
+- [ ] Variables + Types
+- [ ] Operators
+- [ ] Conditions
+- [ ] Loops
+- [ ] Functions
+- [ ] Arrays
+- [ ] Strings
+- [ ] References
+- [ ] Pointers
+- [ ] Structs / Classes
+- [ ] STL vector
+- [ ] STL pair
+- [ ] Iterators
+- [ ] Big-O basics
+
+### Phase 1 — Complexity + Math
+- [ ] Loop complexity
+- [ ] Nested-loop complexity
+- [ ] Space complexity
+- [ ] GCD / LCM
+- [ ] Prime checking
+- [ ] Sieve
+- [ ] Fast exponentiation
+
+---
+
+## Re-Solve Queue
+
+Problems you previously failed or solved with help.
+
+| Problem | Topic | First Attempt | Re-solve | Result |
+|---|---|---|---|---|
+| | | | | |
+
+---
+
+## Mistake Log
+
+Track recurring mistakes. This is more valuable than pretending every solved problem is mastered.
+
+| Date | Topic | Mistake | Root Cause | Fix |
+|---|---|---|---|---|
+| | | | | |
+
+---
+
+## Rule
+
+A problem only counts as **solved** when you can reproduce the solution later without copying it.
