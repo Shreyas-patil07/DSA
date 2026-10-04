@@ -1,0 +1,1 @@
+# Complexity & Mathematics\n\nThis phase builds the reasoning required to analyze DSA solutions.\n\n## Topics\n\n- Big-O / Theta / Omega\n- Time and space complexity\n- Loop analysis\n- Recurrence basics\n- GCD / LCM\n- Prime numbers and sieve\n- Modular arithmetic\n- Fast exponentiation\n- Combinatorics basics\n
