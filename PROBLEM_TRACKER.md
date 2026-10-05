@@ -55,6 +55,16 @@ Use this file to track **mastery**, not activity.
 
 ---
 
+## Daily Progress
+
+### 2026-10-05 — Phase 0.1: C++ Environment
+
+- Added `00-cpp-basics/01-environment/README.md`
+- Added `hello.cpp` for C++17 compiler verification
+- Added `exercise.cpp` for basic compile/run practice
+- Local verification: **pending user execution**
+- Roadmap completion: **not marked complete**
+
 ## Re-Solve Queue
 
 Problems you previously failed or solved with help.
