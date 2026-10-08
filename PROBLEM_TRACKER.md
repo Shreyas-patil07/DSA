@@ -65,6 +65,15 @@ Use this file to track **mastery**, not activity.
 - Local verification: **pending user execution**
 - Roadmap completion: **not marked complete**
 
+## Daily Progress
+
+### 2026-10-07 — Phase 0.1: C++ Environment (continued)
+
+- Added build/debug workflow notes.
+- Added build-pipeline and debugger practice requirements.
+- Local compiler/debugger verification: **pending learner execution**.
+- Roadmap completion: **not marked complete**.
+
 ## Re-Solve Queue
 
 Problems you previously failed or solved with help.
