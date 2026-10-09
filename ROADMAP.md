@@ -11,6 +11,8 @@ This is the master syllabus. Follow it in order unless a problem specifically re
 - [ ] C++17 standard
 - [ ] Basic debugging with breakpoints
 
+> Practice material: `00-cpp-basics/01-environment/DEBUGGER_PRACTICE.md`. Local compiler/debugger verification is still pending; keep the checklist unchecked until verified.
+
 ### 0.2 Program structure
 - [ ] `#include`
 - [ ] `main()`

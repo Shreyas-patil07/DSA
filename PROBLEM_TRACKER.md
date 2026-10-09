@@ -97,3 +97,11 @@ Track recurring mistakes. This is more valuable than pretending every solved pro
 ## Rule
 
 A problem only counts as **solved** when you can reproduce the solution later without copying it.
+
+
+### 2026-10-08 — Phase 0.1: Debugger Practice
+
+- Added `debugger_walkthrough.cpp` with a small function call suitable for breakpoints and stepping.
+- Added `DEBUGGER_PRACTICE.md` with build commands, expected output, variable/call-stack inspection, complexity, edge cases, and practice tasks.
+- Local debugger verification: **pending learner execution**.
+- Roadmap completion: **not marked complete**.
