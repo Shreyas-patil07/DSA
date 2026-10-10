@@ -2,52 +2,26 @@
 
 ## Daily cadence
 
-One focused unit is completed every day, following `ROADMAP.md` in order.
+Complete one coherent learning unit per day, following `ROADMAP.md` in prerequisite order.
 
-### Daily workflow
+## Daily workflow
 
-1. Study the day's concept.
-2. Implement the important parts in C++.
-3. Add small exercises/problems.
-4. Record time and space complexity.
-5. Test edge cases.
-6. Update the relevant roadmap checkbox only when the work is actually mastered.
-7. Update `PROBLEM_TRACKER.md`.
-8. Commit the day's work.
+1. Study the next unfinished section.
+2. Add or improve a C++ implementation and exercises.
+3. Compile and test when an execution environment is available.
+4. Document complexity, expected behavior, and edge cases.
+5. Update `PROBLEM_TRACKER.md`.
+6. Change roadmap checkboxes only when completion is evidenced; never mark local setup tasks complete from repository contents alone.
+7. Commit the work and identify the next unit.
 
-## Daily unit sizing
+## Current unit
 
-A daily unit should be small enough to finish properly in one sitting. Do not rush an entire major data structure or algorithm into one day merely to maintain streaks.
+**Phase 0.1 — Environment verification.** The repository contains basic compiler and debugger exercises plus a separate-compilation/linking demo. Local compiler and debugger checks remain pending, so Phase 0.1 is not complete.
 
-Large topics should be split across multiple days.
+## Next curriculum unit
+
+After Phase 0.1 is verified, proceed to **Phase 0.2 — Program Structure**: `#include`, `main()`, statements, comments, namespaces, header/source separation, and compilation vs linking.
 
 ## Mastery rule
 
-A topic is not complete because the notes were read.
-
-Mark it complete only when the implementation, complexity analysis, edge cases, and required practice are done and the concept can be reproduced without copying.
-
-## Order
-
-C++ fundamentals
-→ complexity and mathematics
-→ arrays and strings
-→ searching and sorting
-→ linked lists
-→ stacks, queues and hashing
-→ recursion and backtracking
-→ trees
-→ heaps and tries
-→ greedy
-→ divide and conquer
-→ graphs
-→ dynamic programming
-→ bit manipulation
-→ advanced data structures
-→ advanced graphs
-→ interview/problem-solving patterns
-→ competitive programming extensions
-
-## Current starting unit
-
-**Phase 0 — C++ Basics → Program structure and syntax.**
+Reading notes is not completion. Verify the code, explain the concept without notes, and complete the practice tasks before marking a topic mastered.
