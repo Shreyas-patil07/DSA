@@ -79,6 +79,14 @@ Use this file to track **mastery**, not activity.
 - Local Phase 0.1 verification: **still pending**.
 - Roadmap checkboxes: **left unchecked**.
 
+### 2026-10-10 — Phase 0.1: Automated environment smoke check
+
+- Added `00-cpp-basics/01-environment/verify_environment.sh`.
+- The script checks GCC availability/version, compiles and runs the hello, exercise, and debugger walkthrough programs with C++17 and warnings, and separately compiles/links/runs the greeting demo.
+- It reports debugger availability but explicitly requires a manual breakpoint/variable/call-stack check.
+- Script execution on the learner's machine: **pending**.
+- Phase 0.1 completion: **not marked complete**; no roadmap checkboxes changed.
+
 ## Re-Solve Queue
 
 Problems previously failed or solved with help.
