@@ -14,15 +14,52 @@ g++ -std=c++17 -Wall -Wextra -pedantic -g 00-cpp-basics/01-environment/debugger_
 
 Run it from the terminal:
 
-**Linux/macOS**
+**Linux / Ubuntu / WSL**
 ```bash
 ./debugger_walkthrough
 ```
 
-**Windows PowerShell**
+**Windows PowerShell with MinGW**
 ```powershell
 .\debugger_walkthrough.exe
 ```
+
+## Command-line debugger walkthrough (GDB)
+
+Use this on Ubuntu/WSL or a GCC/MinGW shell where `gdb` is installed and on `PATH`.
+
+Launch GDB:
+
+```bash
+gdb ./debugger_walkthrough
+```
+
+On Windows MinGW, the executable may be named `debugger_walkthrough.exe`; use that filename in the command.
+
+Enter these commands one at a time at the `(gdb)` prompt:
+
+```text
+set pagination off
+break calculateDiscount
+run
+print price
+print discountPercent
+backtrace
+next
+print discount
+finish
+continue
+quit
+```
+
+What success looks like:
+- GDB reports that it hit the `calculateDiscount` breakpoint.
+- `price` is `1200` and `discountPercent` is `15`.
+- `backtrace` shows `calculateDiscount` called from `main`.
+- After `next`, `discount` is `180`.
+- The program finishes and prints the final price as `1020`.
+
+If GDB is unavailable, install it for your environment or use your IDE's debugger. For Visual Studio/MSVC, use the Visual Studio debugger rather than these GDB-specific commands.
 
 ## Debugger tasks
 
@@ -71,4 +108,4 @@ The function is intentionally minimal and does not validate negative prices or p
 
 ## Completion rule
 
-Only confirm this part of Phase 0.1 after you personally complete the debugger tasks on your machine. Repository files alone do not verify your local toolchain.
+Only confirm this part of Phase 0.1 after you personally complete the debugger tasks on your machine. Repository files and CI results do not verify your local toolchain.

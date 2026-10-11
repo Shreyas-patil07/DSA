@@ -34,17 +34,42 @@ jobs:
             g++ -std=c++17 -Wall -Wextra -pedantic -g "$source" -o "$binary"
             "$binary"
           done
+      - name: Smoke-test debugger breakpoint and inspection
+        shell: bash
+        run: |
+          set -euo pipefail
+          src="00-cpp-basics/01-environment/debugger_walkthrough.cpp"
+          tmp="$(mktemp -d)"
+          trap 'rm -rf "$tmp"' EXIT
+          binary="$tmp/debugger_walkthrough"
+          output="$tmp/gdb-output.txt"
+
+          g++ -std=c++17 -Wall -Wextra -pedantic -g "$src" -o "$binary"
+          gdb --batch --quiet \
+            -ex 'set pagination off' \
+            -ex 'break calculateDiscount' \
+            -ex 'run' \
+            -ex 'print price' \
+            -ex 'print discountPercent' \
+            -ex 'backtrace' \
+            -ex 'continue' \
+            "$binary" > "$output" 2>&1
+          cat "$output"
+
+          grep -Fq 'Breakpoint 1, calculateDiscount' "$output"
+          grep -Fq '$1 = 1200' "$output"
+          grep -Fq '$2 = 15' "$output"
+          grep -Fq 'main ()' "$output"
       - name: Verify separate compilation and linking
         shell: bash
         run: |
           set -euo pipefail
-          dir="00-cpp-basics/01-environment/linking-demo"
+          dir="00-cpp-basics/01-environment"
           tmp="$(mktemp -d)"
           trap 'rm -rf "$tmp"' EXIT
-          g++ -std=c++17 -Wall -Wextra -pedantic -g -c "$dir/greeter.cpp" -o "$tmp/greeter.o"
-          g++ -std=c++17 -Wall -Wextra -pedantic -g -c "$dir/main.cpp" -o "$tmp/main.o"
+          g++ -std=c++17 -Wall -Wextra -pedantic -g -c "$dir/linking-demo/greeter.cpp" -o "$tmp/greeter.o"
+          g++ -std=c++17 -Wall -Wextra -pedantic -g -c "$dir/linking-demo/main.cpp" -o "$tmp/main.o"
           g++ "$tmp/main.o" "$tmp/greeter.o" -o "$tmp/linking-demo"
           "$tmp/linking-demo" | grep -Fx 'Hello, DSA learner!'
       - name: Verify debugger is installed
         run: gdb --version
-

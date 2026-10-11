@@ -80,18 +80,20 @@ Use this file to track **mastery**, not activity.
 - Roadmap checkboxes: **left unchecked**.
 
 ### 2026-10-10 — Phase 0.1: Automated environment smoke check
-
 - Added `00-cpp-basics/01-environment/verify_environment.sh`.
 - The script checks GCC availability/version, compiles and runs the hello, exercise, and debugger walkthrough programs with C++17 and warnings, and separately compiles/links/runs the greeting demo.
 - It reports debugger availability but explicitly requires a manual breakpoint/variable/call-stack check.
 - Script execution on the learner's machine: **pending**.
 - Phase 0.1 completion: **not marked complete**; no roadmap checkboxes changed.
 
-### 2026-10-11 — Phase 0.1: Repeatable CI verification
+### 2026-10-11 — Phase 0.1: Repeatable CI and debugger verification
 - Added a GitHub Actions workflow to compile and execute the existing C++17 environment examples on pushes, pull requests, and manual dispatch.
-- The workflow also verifies separate compilation/linking and confirms GDB is installed in CI.
-- CI cannot prove that the learner's local debugger breakpoints and variable inspection work.
-- Local verification: **still pending**; roadmap checkboxes remain unchecked.
+- The initial workflow run succeeded: [run #1](https://github.com/Shreyas-patil07/DSA/actions/runs/38132106531).
+- Strengthened CI to exercise a GDB breakpoint, inspect function arguments, and capture the call stack rather than only checking that GDB is installed.
+- Added copy-paste GDB commands and expected values to `DEBUGGER_PRACTICE.md`.
+- The new workflow run must pass before recording its debugger smoke test as verified.
+- CI still cannot prove the learner's local debugger works; local verification remains pending.
+- Roadmap checkboxes remain unchecked.
 
 ## Re-Solve Queue
 
