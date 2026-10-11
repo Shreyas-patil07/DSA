@@ -95,6 +95,13 @@ Use this file to track **mastery**, not activity.
 - CI still cannot prove the learner's local debugger works; local verification remains pending.
 - Roadmap checkboxes remain unchecked.
 
+### 2026-10-11 — Phase 0.1: Native Windows verification script
+- Added 00-cpp-basics/01-environment/verify_environment.ps1 for Windows PowerShell users with GCC/MinGW on PATH.
+- It checks the compiler version, builds and runs the three C++17 examples, verifies exact output, and separately compiles and links the greeting demo.
+- Updated the environment README with the Windows command and MSVC caveat.
+- The PowerShell script has not been executed on the learner's Windows machine; do not treat it as locally verified.
+- Local debugger verification remains pending; roadmap checkboxes remain unchecked.
+
 ## Re-Solve Queue
 
 Problems previously failed or solved with help.

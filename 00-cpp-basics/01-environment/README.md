@@ -42,6 +42,16 @@ Run:
 .\hello.exe
 ```
 
+### Windows PowerShell — automated environment checks
+
+If GCC/MinGW is installed and g++ is on PATH, run this from the repository root:
+
+    .\00-cpp-basics\01-environment\verify_environment.ps1
+
+The script checks the compiler version, builds and runs the three C++17 examples with warnings and debug symbols, then separately compiles and links the greeting demo. It checks exact output and fails on compilation errors or unexpected results. Build artifacts are left in the temporary directory printed at the end.
+
+This script targets GCC/MinGW. If you use MSVC, use Visual Studio Developer PowerShell and the cl compiler instead; GCC flags are not interchangeable with MSVC flags.
+
 ## Debugging
 
 Learn these basic debugger actions:
