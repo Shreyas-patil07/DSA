@@ -87,6 +87,12 @@ Use this file to track **mastery**, not activity.
 - Script execution on the learner's machine: **pending**.
 - Phase 0.1 completion: **not marked complete**; no roadmap checkboxes changed.
 
+### 2026-10-11 — Phase 0.1: Repeatable CI verification
+- Added a GitHub Actions workflow to compile and execute the existing C++17 environment examples on pushes, pull requests, and manual dispatch.
+- The workflow also verifies separate compilation/linking and confirms GDB is installed in CI.
+- CI cannot prove that the learner's local debugger breakpoints and variable inspection work.
+- Local verification: **still pending**; roadmap checkboxes remain unchecked.
+
 ## Re-Solve Queue
 
 Problems previously failed or solved with help.

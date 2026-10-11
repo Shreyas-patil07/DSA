@@ -1,0 +1,50 @@
+name: C++ Environment Smoke Test
+
+on:
+  push:
+    paths:
+      - '00-cpp-basics/01-environment/**'
+      - '.github/workflows/cpp-environment.yml'
+  pull_request:
+    paths:
+      - '00-cpp-basics/01-environment/**'
+      - '.github/workflows/cpp-environment.yml'
+  workflow_dispatch:
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install compiler and debugger
+        run: sudo apt-get update && sudo apt-get install -y g++ gdb
+      - name: Verify compiler
+        run: g++ --version
+      - name: Compile and run C++17 examples
+        shell: bash
+        run: |
+          set -euo pipefail
+          tmp="$(mktemp -d)"
+          trap 'rm -rf "$tmp"' EXIT
+          for source in \
+            00-cpp-basics/01-environment/hello.cpp \
+            00-cpp-basics/01-environment/exercise.cpp \
+            00-cpp-basics/01-environment/debugger_walkthrough.cpp; do
+            binary="$tmp/$(basename "$source" .cpp)"
+            g++ -std=c++17 -Wall -Wextra -pedantic -g "$source" -o "$binary"
+            "$binary"
+          done
+      - name: Verify separate compilation and linking
+        shell: bash
+        run: |
+          set -euo pipefail
+          dir="00-cpp-basics/01-environment/linking-demo"
+          tmp="$(mktemp -d)"
+          trap 'rm -rf "$tmp"' EXIT
+          g++ -std=c++17 -Wall -Wextra -pedantic -g -c "$dir/greeter.cpp" -o "$tmp/greeter.o"
+          g++ -std=c++17 -Wall -Wextra -pedantic -g -c "$dir/main.cpp" -o "$tmp/main.o"
+          g++ "$tmp/main.o" "$tmp/greeter.o" -o "$tmp/linking-demo"
+          "$tmp/linking-demo" | grep -Fx 'Hello, DSA learner!'
+      - name: Verify debugger is installed
+        run: gdb --version
+
