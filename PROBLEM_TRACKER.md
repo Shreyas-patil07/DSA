@@ -90,8 +90,8 @@ Use this file to track **mastery**, not activity.
 - Added a GitHub Actions workflow to compile and execute the existing C++17 environment examples on pushes, pull requests, and manual dispatch.
 - The initial workflow run succeeded: [run #1](https://github.com/Shreyas-patil07/DSA/actions/runs/38132106531).
 - Strengthened CI to exercise a GDB breakpoint, inspect function arguments, and capture the call stack rather than only checking that GDB is installed.
+- The updated workflow passed: [run #2](https://github.com/Shreyas-patil07/DSA/actions/runs/38132264226). The GDB breakpoint, variable checks, backtrace, C++17 examples, and separate-linking steps succeeded.
 - Added copy-paste GDB commands and expected values to `DEBUGGER_PRACTICE.md`.
-- The new workflow run must pass before recording its debugger smoke test as verified.
 - CI still cannot prove the learner's local debugger works; local verification remains pending.
 - Roadmap checkboxes remain unchecked.
 
