@@ -119,3 +119,9 @@ Problems previously failed or solved with help.
 ## Rule
 
 A problem only counts as solved when you can reproduce the solution later without copying it.
+
+### 2026-10-12 — Phase 0.1: Post-merge CI confirmation
+- Confirmed the workflow run after the Windows environment documentation was merged to `main`: [run #3](https://github.com/Shreyas-patil07/DSA/actions/runs/38197054913) passed.
+- Verified CI steps completed successfully: C++17 compilation/execution, GDB breakpoint and variable inspection, call-stack smoke test, and separate compilation/linking.
+- This is CI evidence only. The Windows PowerShell checker has not been run on the learner's machine, and interactive local debugger inspection is still pending.
+- Roadmap checkboxes remain unchecked; Phase 0.2 is blocked until the local Phase 0.1 verification is complete.
